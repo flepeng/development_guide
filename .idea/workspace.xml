@@ -2,15 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6ad3aee-2267-4d9a-b780-e4d0bcf28237" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/前端开发规范-命名规范、html规范、css规范、js规范.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/命名规范和注释规范.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend_backend_separation/RESTful 设计指南.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend_backend_separation/reference/api.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend_backend_separation/前后端分离开发理解.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend_backend_separation/前后端分离开发规范.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/Vue 项目通用目录结构.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/reference.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySQL/MySQL 开发指南.md" beforeDir="false" afterPath="$PROJECT_DIR$/MySQL/MySQL 开发指南.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/Python 项目通用目录结构.md" beforeDir="false" afterPath="$PROJECT_DIR$/Python/Python 项目通用目录结构.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/命名规范和注释规范.md" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/命名规范和注释规范.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend_backend_separation/RESTful 设计指南.md" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_backend_separation/RESTful 设计指南.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend_backend_separation/reference/api.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend_backend_separation/前后端分离开发规范.md" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_backend_separation/前后端分离开发规范.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,35 +23,11 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MySQL/reference/mysql运维及开发规范.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="22">
-                <caret line="1" selection-start-line="1" selection-end-line="1" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="330">
                 <caret line="15" column="55" selection-start-line="15" selection-start-column="55" selection-end-line="15" selection-end-column="55" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/前端开发规范-命名规范、html规范、css规范、js规范.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="-14284">
-                <caret line="171" selection-start-line="171" selection-end-line="171" />
               </first_editor>
               <second_editor />
             </state>
@@ -70,12 +48,12 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/frontend_backend_separation/RESTful 设计指南.md">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/reference.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="5324">
-                <caret line="242" column="42" lean-forward="true" selection-start-line="242" selection-start-column="42" selection-end-line="242" selection-end-column="42" />
+              <first_editor relative-caret-position="242">
+                <caret line="11" column="104" selection-start-line="11" selection-start-column="104" selection-end-line="11" selection-end-column="104" />
               </first_editor>
               <second_editor />
             </state>
@@ -83,16 +61,26 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend_backend_separation/前后端分离开发规范.md">
+        <entry file="file://$PROJECT_DIR$/frontend/Vue 项目通用目录结构.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="188">
-                <caret line="173" column="46" lean-forward="true" selection-start-line="173" selection-start-column="46" selection-end-line="173" selection-end-column="46" />
+              <first_editor relative-caret-position="3498">
+                <caret line="159" column="12" selection-start-line="159" selection-start-column="12" selection-end-line="159" selection-end-column="12" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/MySQL/MySQL 开发指南.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="131">
+                <caret line="6" column="9" lean-forward="true" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
                 <folding>
-                  <element signature="e#1#8#0" />
-                  <element signature="e#95#106#0" />
-                  <element signature="e#1122#1141#0" />
-                  <element signature="e#3091#3103#0" />
+                  <element signature="e#473#484#0" />
+                  <element signature="e#11323#11339#0" />
                 </folding>
               </first_editor>
               <second_editor />
@@ -101,35 +89,11 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/命名规范和注释规范.md">
+        <entry file="file://$PROJECT_DIR$/Python/Python 项目通用目录结构.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="418">
-                <caret line="193" selection-start-line="193" selection-end-line="193" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MySQL/reference/MySQL 优化建议.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor>
-                <caret column="8" selection-start-column="8" selection-end-column="8" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MySQL/reference/1、建表规约.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="396">
-                <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+              <first_editor relative-caret-position="616">
+                <caret line="28" selection-start-line="28" selection-end-line="28" selection-end-column="1" />
               </first_editor>
               <second_editor />
             </state>
@@ -156,7 +120,13 @@
       <find>select *</find>
       <find>Prepared Statements</find>
       <find>复制代码</find>
+      <find>—</find>
+      <find>索引</find>
     </findStrings>
+    <replaceStrings>
+      <replace>├──</replace>
+      <replace>─</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="ROOT_SYNC" value="DONT_SYNC" />
@@ -179,24 +149,29 @@
         <option value="$PROJECT_DIR$/MySQL/reference/MySQL高性能优化规范建议.md" />
         <option value="$PROJECT_DIR$/MySQL/reference/mysql运维及开发规范.md" />
         <option value="$PROJECT_DIR$/MySQL/reference/MySQL 优化建议.md" />
-        <option value="$PROJECT_DIR$/frontend/命名规范和注释规范.md" />
         <option value="$PROJECT_DIR$/frontend/前端开发规范-命名规范、html规范、css规范、js规范.md" />
         <option value="$PROJECT_DIR$/frontend_backend/前后端分离开发指南.md" />
         <option value="$PROJECT_DIR$/frontend_backend/前后端分离开发理解.md" />
         <option value="$PROJECT_DIR$/frontend_backend/RESTFul 设计指南.md" />
         <option value="$PROJECT_DIR$/frontend_backend/前后端分离开发规范.md" />
-        <option value="$PROJECT_DIR$/frontend_backend_separation/RESTful 设计指南.md" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/frontend_backend_separation/前后端分离开发理解.md" />
+        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/frontend_backend_separation/前后端分离开发规范.md" />
+        <option value="$PROJECT_DIR$/frontend/命名规范和注释规范.md" />
+        <option value="$PROJECT_DIR$/frontend_backend_separation/RESTful 设计指南.md" />
+        <option value="$PROJECT_DIR$/frontend/reference.md" />
+        <option value="$PROJECT_DIR$/Python/Python 项目通用目录结构.md" />
+        <option value="$PROJECT_DIR$/frontend/Vue 项目通用目录结构.md" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/MySQL/MySQL 开发指南.md" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1358" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -215,7 +190,22 @@
             <path>
               <item name="development_guide" type="b2602c69:ProjectViewProjectNode" />
               <item name="development_guide" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="development_guide" type="b2602c69:ProjectViewProjectNode" />
+              <item name="development_guide" type="462c0819:PsiDirectoryNode" />
               <item name="frontend_backend_separation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="development_guide" type="b2602c69:ProjectViewProjectNode" />
+              <item name="development_guide" type="462c0819:PsiDirectoryNode" />
+              <item name="MySQL" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="development_guide" type="b2602c69:ProjectViewProjectNode" />
+              <item name="development_guide" type="462c0819:PsiDirectoryNode" />
+              <item name="Python" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -226,7 +216,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/frontend_backend_separation/reference" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/frontend" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -238,15 +228,15 @@
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\home\my_git\development_guide\Python" />
-      <recent name="D:\home\my_git\development_guide\MySQL\reference" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\home\my_git\development_guide\frontend" />
       <recent name="D:\home\my_git\development_guide\frontend_backend_separation\reference" />
       <recent name="D:\home\my_git\development_guide\frontend_backend" />
       <recent name="D:\home\my_git\development_guide\img" />
-      <recent name="D:\home\my_git\development_guide\frontend" />
+      <recent name="D:\home\my_git\development_guide\MySQL\reference" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\home\my_git\development_guide\Python" />
       <recent name="D:\home\my_git\development_guide\MySQL\reference" />
     </key>
   </component>
@@ -285,17 +275,51 @@
       <workItem from="1653030399364" duration="594000" />
       <workItem from="1653364460930" duration="206000" />
       <workItem from="1654497009048" duration="2197000" />
-      <workItem from="1654765346116" duration="15176000" />
+      <workItem from="1654765346116" duration="20400000" />
+      <workItem from="1655090817320" duration="1180000" />
+      <workItem from="1655805570932" duration="1204000" />
+      <workItem from="1655882617441" duration="1794000" />
+      <workItem from="1656327397279" duration="577000" />
+      <workItem from="1656571781953" duration="1793000" />
+      <workItem from="1656674101872" duration="1637000" />
+      <workItem from="1657250107626" duration="594000" />
+      <workItem from="1657701952585" duration="2123000" />
+      <workItem from="1658151618921" duration="594000" />
+      <workItem from="1659322206837" duration="597000" />
+      <workItem from="1659515274667" duration="1196000" />
+      <workItem from="1659925131498" duration="588000" />
+      <workItem from="1660032560114" duration="1196000" />
+      <workItem from="1660115794288" duration="589000" />
+      <workItem from="1660272419509" duration="1191000" />
+      <workItem from="1660559997823" duration="589000" />
+      <workItem from="1660645188770" duration="593000" />
+      <workItem from="1661137292601" duration="988000" />
+      <workItem from="1661233948888" duration="9726000" />
+      <workItem from="1661514748630" duration="594000" />
+      <workItem from="1661827447964" duration="589000" />
+      <workItem from="1662348163953" duration="144000" />
+      <workItem from="1663927029980" duration="1481000" />
+      <workItem from="1664170731486" duration="585000" />
+      <workItem from="1666079425416" duration="1017000" />
     </task>
+    <task id="LOCAL-00001" summary="add frontend_backend_separation">
+      <created>1654852952786</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1654852952786</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46138000" />
+    <option name="totallyTimeSpent" value="84521000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1358" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15138593" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28517398" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -320,6 +344,10 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add frontend_backend_separation" />
+    <option name="LAST_COMMIT_MESSAGE" value="add frontend_backend_separation" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/MySQL/reference/2、索引规约.md">
@@ -352,16 +380,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MySQL/MySQL 开发指南.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="88">
-            <caret line="4" column="75" selection-start-line="4" selection-start-column="55" selection-end-line="4" selection-end-column="75" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MySQL/reference/MySQL 高性能数据库规范.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
@@ -382,16 +400,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Python/Python 项目通用目录结构.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="132">
-            <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MySQL/reference/MySQL高性能优化规范建议.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -402,7 +410,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/frontend_backend_separation/reference/api.md" />
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="78" column="5" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/MySQL/reference/mysql运维及开发规范.md">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="5764">
+          <caret line="262" selection-start-line="262" selection-end-line="262" />
+        </state>
+      </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
           <first_editor relative-caret-position="22">
@@ -411,9 +432,14 @@
           <second_editor />
         </state>
       </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="5764">
-          <caret line="262" selection-start-line="262" selection-end-line="262" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend_backend_separation/RESTful 设计指南.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="2244">
+            <caret line="102" column="11" selection-start-line="102" selection-start-column="11" selection-end-line="102" selection-end-column="11" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
@@ -437,30 +463,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/命名规范和注释规范.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="418">
-            <caret line="193" selection-start-line="193" selection-end-line="193" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/前端开发规范-命名规范、html规范、css规范、js规范.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-14284">
-            <caret line="171" selection-start-line="171" selection-end-line="171" />
+          <first_editor relative-caret-position="242">
+            <caret line="11" selection-start-line="11" selection-end-line="11" />
+            <folding>
+              <element signature="e#294#301#0" />
+              <element signature="e#1019#1025#0" />
+              <element signature="e#5251#5262#0" />
+              <element signature="e#5463#5478#0" />
+              <element signature="e#5882#5894#0" />
+            </folding>
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend_backend_separation/reference/api.md">
+    <entry file="file://$PROJECT_DIR$/frontend/命名规范和注释规范.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor />
+          <first_editor relative-caret-position="488">
+            <caret line="65" column="82" selection-start-line="65" selection-start-column="82" selection-end-line="65" selection-end-column="82" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend_backend_separation/前后端分离开发规范.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="1804">
+            <caret line="105" column="15" selection-start-line="105" selection-start-column="9" selection-end-line="105" selection-end-column="15" />
+            <folding>
+              <element signature="e#748#833#0" />
+              <element signature="e#837#1098#0" />
+            </folding>
+          </first_editor>
           <second_editor />
         </state>
       </provider>
@@ -475,17 +514,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend_backend_separation/前后端分离开发规范.md">
+    <entry file="file://$PROJECT_DIR$/frontend/reference.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="188">
-            <caret line="173" column="46" lean-forward="true" selection-start-line="173" selection-start-column="46" selection-end-line="173" selection-end-column="46" />
-            <folding>
-              <element signature="e#1#8#0" />
-              <element signature="e#95#106#0" />
-              <element signature="e#1122#1141#0" />
-              <element signature="e#3091#3103#0" />
-            </folding>
+          <first_editor relative-caret-position="242">
+            <caret line="11" column="104" selection-start-line="11" selection-start-column="104" selection-end-line="11" selection-end-column="104" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/Vue 项目通用目录结构.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="3498">
+            <caret line="159" column="12" selection-start-line="159" selection-start-column="12" selection-end-line="159" selection-end-column="12" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Python/Python 项目通用目录结构.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="616">
+            <caret line="28" selection-start-line="28" selection-end-line="28" selection-end-column="1" />
           </first_editor>
           <second_editor />
         </state>
@@ -503,11 +556,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend_backend_separation/RESTful 设计指南.md">
+    <entry file="file://$PROJECT_DIR$/MySQL/MySQL 开发指南.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="5324">
-            <caret line="242" column="42" lean-forward="true" selection-start-line="242" selection-start-column="42" selection-end-line="242" selection-end-column="42" />
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="131">
+            <caret line="6" column="9" lean-forward="true" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
+            <folding>
+              <element signature="e#473#484#0" />
+              <element signature="e#11323#11339#0" />
+            </folding>
           </first_editor>
           <second_editor />
         </state>

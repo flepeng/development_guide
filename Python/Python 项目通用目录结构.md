@@ -1,5 +1,5 @@
 ---
-title: Python 项目通用目录结构.py
+title: Python 项目通用目录结构
 subtitle: 
 author: Lepeng
 catalog: true

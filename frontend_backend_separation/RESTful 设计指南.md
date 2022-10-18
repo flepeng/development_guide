@@ -96,11 +96,12 @@ https://api.example.com/v1/employees
 
 下面是一些常见的参数。
 
-*   ?limit=10：指定返回记录的数量
-*   ?offset=10：指定返回记录的开始位置。
-*   ?page=2&per\_page=100：指定第几页，以及每页的记录数。
-*   ?sortby=name&order=asc：指定返回结果按照哪个属性排序，以及排序顺序。
-*   ?animal\_type\_id=1：指定筛选条件
+*   `?limit=10`：指定返回记录的数量
+*   `?offset=10`：指定返回记录的开始位置。
+
+*   `?current_page=2&page_size=100`：指定第几页，以及每页的记录数。
+*   `?sort_by=name&order=asc`：指定返回结果按照哪个属性排序，以及排序顺序。
+*   `?animal_type_id=1`：指定筛选条件
 
 参数的设计允许存在冗余，即允许API路径和URL参数偶尔有重复。比如，GET /zoo/ID/animals 与 GET /animals?zoo\_id=ID 的含义是相同的。
 
