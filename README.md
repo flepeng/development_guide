@@ -7,7 +7,7 @@
 
 ## Python
 
-- [Python 项目通用目录结构](Python/Python%20项目通用目录结构.md)：开发 Python 项目通用的目录结构
+- [Python 项目通用目录结构](Python/Python%20项目通用目录结构.md)：Python 项目通用的目录结构
 
 
 ## frontend_backend_separation
@@ -16,16 +16,15 @@
 - [前后端分离开发规范](frontend_backend_separation/前后端分离开发规范.md)
 
 
-## 各类开发环境缩写
-
+# 各类开发环境缩写
 
 英文缩写 | 英文 | 中文 
---- | --- | --- 
-DEV | development | 开发 
-SIT | System Integrate Test | 系统整合测试（内测）
-UAT | User Acceptance Test | 用户验收测试
-PET | Performance Evaluation Test | 性能评估测试（压测）
-SIM | simulation | 仿真
+-------- | --- | --- 
+DEV      | development | 开发 
+SIT      | System Integrate Test | 系统整合测试（内测）
+UAT      | User Acceptance Test | 用户验收测试
+PET      | Performance Evaluation Test | 性能评估测试（压测）
+SIM      | simulation | 仿真
 PRD/PROD | production | 产品/正式/生产
 
 
