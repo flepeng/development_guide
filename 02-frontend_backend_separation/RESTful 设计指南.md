@@ -1,16 +1,17 @@
 
 网络应用程序，分为前端和后端两个部分。当前的发展趋势，就是前端设备层出不穷（手机、平板、桌面电脑、其他专用设备......）。
 
-因此，必须有一种统一的机制，方便不同的前端设备与后端进行通信。这导致API构架的流行，甚至出现"API First"的设计思想。[RESTful API](https://en.wikipedia.org/wiki/Representational_state_transfer)是目前比较成熟的一套互联网应用程序的API设计理论。
+因此，必须有一种统一的机制，方便不同的前端设备与后端进行通信。这导致 API 构架的流行，甚至出现 `API First` 的设计思想。[RESTful API](https://en.wikipedia.org/wiki/Representational_state_transfer)是目前比较成熟的一套互联网应用程序的 API 设计理论。
+
 
 ## 一、协议
 
-API与用户的通信协议，总是使用`HTTPS`协议。
+API 与用户的通信协议，总是使用 `HTTPS` 协议。
 
 
 ## 二、域名
 
-应该尽量将API部署在专用域名之下。
+应该尽量将 API 部署在专用域名之下。
 
 ```
 https://api.example.com
@@ -21,27 +22,26 @@ https://api.example.com
 ```
 https://example.org/api/
 ```
-``
 
 
 ## 三、版本（Versioning）
 
-应该将API的版本号放入URL。
+应该将 API 的版本号放入 URL。
 
 ```
 https://api.example.com/v1/
 ```
 
-另一种做法是，将版本号放在HTTP头信息中，如放在`x-api-version`中， 但不如放入URL方便和直观。[Github](https://developer.github.com/v3/media/#request-specific-version)采用这种做法。
+另一种做法是，将版本号放在 HTTP 头信息中，如放在 `x-api-version` 中， 但不如放入URL方便和直观。[Github](https://developer.github.com/v3/media/#request-specific-version)采用这种做法。
 
 
 ## 四、路径（Endpoint）
 
-路径又称"终点"（endpoint），表示API的具体网址。
+路径又称"终点"（endpoint），表示 API 的具体网址。
 
-在RESTful架构中，每个网址代表一种资源（resource），所以网址中不能有动词，只能有名词（可复数），而且所用的名词往往与数据库的表格名对应。一般来说，数据库中的表都是同种记录的"集合"（collection），所以API中的名词也应该使用复数。
+在 RESTful 架构中，每个网址代表一种资源（resource），所以网址中不能有动词，只能有名词（可复数），而且所用的名词往往与数据库的表格名对应。一般来说，数据库中的表都是同种记录的"集合"（collection），所以API中的名词也应该使用复数。
 
-举例来说，有一个API提供动物园（zoo）的信息，还包括各种动物和雇员的信息，则它的路径应该设计成下面这样。
+举例来说，有一个 API 提供动物园（zoo）的信息，还包括各种动物和雇员的信息，则它的路径应该设计成下面这样。
 
 ```
 https://api.example.com/v1/zoos
@@ -50,9 +50,9 @@ https://api.example.com/v1/employees
 ```
 
 
-## 五、HTTP动词
+## 五、HTTP 动词
 
-对于资源的具体操作类型，由HTTP动词表示。常用的HTTP动词有下面前五个（括号里是对应的SQL命令），后面两个HTTP动词不常用。
+对于资源的具体操作类型，由 HTTP 动词表示。常用的 HTTP 动词有下面前五个（括号里是对应的SQL命令），后面两个 HTTP 动词不常用。
 
 *   GET（SELECT）：从服务器取出资源（一项或多项）。
     + 完成请求后返回状态码 `200 OK`
@@ -65,7 +65,7 @@ https://api.example.com/v1/employees
 *   PUT（UPDATE）：在服务器更新资源（客户端提供改变后的完整资源）或者创建指定身份的资源，比如创建 id 为 123 的某个资源。
     + 如果是创建了资源，则返回 `201 Created`
     + 如果是替换了资源，则返回 `200 OK`
-    + 完成请求后需要返回被修改的资源详细信息
+    + 完成请求后需要返回被修改的资源详细信息。
 
 *   PATCH（UPDATE）：在服务器更新资源（客户端提供改变的属性）。
     + 完成请求后返回状态码 `200 OK`
@@ -92,7 +92,7 @@ https://api.example.com/v1/employees
 
 ## 六、过滤信息（Filtering）
 
-如果记录数量很多，服务器不可能都将它们返回给用户。API应该提供参数，过滤返回结果。
+如果记录数量很多，服务器不可能都将它们返回给用户。API 应该提供参数，过滤返回结果。
 
 下面是一些常见的参数。
 
@@ -103,7 +103,7 @@ https://api.example.com/v1/employees
 *   `?sort_by=name&order=asc`：指定返回结果按照哪个属性排序，以及排序顺序。
 *   `?animal_type_id=1`：指定筛选条件
 
-参数的设计允许存在冗余，即允许API路径和URL参数偶尔有重复。比如，GET /zoo/ID/animals 与 GET /animals?zoo\_id=ID 的含义是相同的。
+参数的设计允许存在冗余，即允许 API 路径和 URL 参数偶尔有重复。比如 GET /zoo/ID/animals 与 GET /animals?zoo\_id=ID 的含义是相同的。
 
 
 ## 七、状态码（Status Codes）
@@ -143,7 +143,7 @@ https://api.example.com/v1/employees
 
 ## 八、错误处理（Error handling）
 
-如果状态码是4xx 或 5xx，就应该向用户返回出错信息。一般来说，返回的信息中将error作为键名，也可以直接复用 message，出错信息作为键值即可。
+如果状态码是 4xx 或 5xx，就应该向用户返回出错信息。一般来说，返回的信息中将 error 作为键名，也可以直接复用 message，出错信息作为键值即可。
 
 ```
 {
@@ -152,7 +152,7 @@ https://api.example.com/v1/employees
 }
 ```
 
-* 服务器维护中，`503` 状态码
+*   服务器维护中，`503` 状态码
 
     ```http
     HTTP/1.1 503 Service Unavailable
@@ -160,7 +160,7 @@ https://api.example.com/v1/employees
     {"code": "503", "message": "Service In the maintenance"}
     ```
 
-* 发送了无法转化的请求体，`400` 状态码
+*   发送了无法转化的请求体，`400` 状态码
 
     ```http
     HTTP/1.1 400 Bad Request
@@ -168,7 +168,7 @@ https://api.example.com/v1/employees
     {"code": "400","message": "Problems parsing JSON"}
     ```
 
-* 服务到期（比如付费的增值服务等）， `403` 状态码
+*   服务到期（比如付费的增值服务等）， `403` 状态码
 
     ```http
     HTTP/1.1 403 Forbidden
@@ -176,7 +176,7 @@ https://api.example.com/v1/employees
     {"code": "403","message": "Service expired"}
     ```
 
-* 因为某些原因不允许访问（比如被 ban ），`403` 状态码
+*   因为某些原因不允许访问（比如被 ban ），`403` 状态码
 
     ```http
     HTTP/1.1 403 Forbidden
@@ -184,7 +184,7 @@ https://api.example.com/v1/employees
     {"code": "403", "message": "Account blocked"}
     ```
 
-* 权限不够，`403` 状态码
+*   权限不够，`403` 状态码
 
     ```http
     HTTP/1.1 403 Forbidden
@@ -192,7 +192,7 @@ https://api.example.com/v1/employees
     {"code": "403", "message": "Permission denied"}
     ```
 
-* 需要修改的资源不存在， `404` 状态码
+*   需要修改的资源不存在，`404` 状态码
 
     ```http
     HTTP/1.1 404 Not Found
@@ -200,7 +200,7 @@ https://api.example.com/v1/employees
     {"code": "404", "message": "Resource not found"}
     ```
 
-* 缺少了必要的头信息，`428` 状态码
+*   缺少了必要的头信息，`428` 状态码
 
     ```http
     HTTP/1.1 428 Precondition Required
@@ -208,7 +208,7 @@ https://api.example.com/v1/employees
     {"code": "428", "message": "Header User-Agent is required"}
     ```
 
-* 发送了非法的资源，`422` 状态码
+*   发送了非法的资源，`422` 状态码
 
     ```http
     HTTP/1.1 422 Unprocessable Entity
@@ -234,22 +234,24 @@ https://api.example.com/v1/employees
 
 ## 十、Hypermedia API
 
-RESTful API最好做到Hypermedia，即返回结果中提供链接，连向其他API方法，使得用户不查文档，也知道下一步应该做什么。
+RESTful API 最好做到 Hypermedia，即返回结果中提供链接，连向其他 API 方法，使得用户不查文档，也知道下一步应该做什么。
 
-比如，当用户向api.example.com的根目录发出请求，会得到这样一个文档。
+比如，当用户向 api.example.com 的根目录发出请求，会得到这样一个文档。
 
+```json
+{
+  "link": {
+    "rel":   "collection https://www.example.com/zoos",
+    "href":  "https://api.example.com/zoos",
+    "title": "List of zoos",
+    "type":  "application/vnd.yourformat+json"
+  }
+}
 ```
-{"link": {
-  "rel":   "collection https://www.example.com/zoos",
-  "href":  "https://api.example.com/zoos",
-  "title": "List of zoos",
-  "type":  "application/vnd.yourformat+json"
-}}
-```
 
-上面代码表示，文档中有一个link属性，用户读取这个属性就知道下一步该调用什么API了。rel表示这个API与当前网址的关系（collection关系，并给出该collection的网址），href表示API的路径，title表示API的标题，type表示返回类型。
+上面代码表示，文档中有一个 link 属性，用户读取这个属性就知道下一步该调用什么 API 了。rel 表示这个 API 与当前网址的关系（collection 关系，并给出该 collection 的网址），href 表示 API 的路径，title 表示 API 的标题，type 表示返回类型。
 
-Hypermedia API的设计被称为[HATEOAS](https://en.wikipedia.org/wiki/HATEOAS)。Github的API就是这种设计，访问[api.github.com](https://api.github.com/)会得到一个所有可用API的网址列表。
+Hypermedia API 的设计被称为[HATEOAS](https://en.wikipedia.org/wiki/HATEOAS)。Github 的 API 就是这种设计，访问[api.github.com](https://api.github.com/)会得到一个所有可用API的网址列表。
 
 ```
 {
@@ -275,7 +277,7 @@ Hypermedia API的设计被称为[HATEOAS](https://en.wikipedia.org/wiki/HATEOAS)
 
 - API的身份认证应该使用[OAuth 2.0](https://www.ruanyifeng.com/blog/2014/05/oauth_2_0.html)框架。
 
-- 服务器返回的数据格式，应该尽量使用JSON，避免使用XML。
+- 服务器返回的数据格式，应该尽量使用 JSON，避免使用 XML。
 
 
 ## reference
