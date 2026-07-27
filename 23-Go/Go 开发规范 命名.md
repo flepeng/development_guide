@@ -3,12 +3,17 @@
 
 *   Go 的惯例是使用 MixedCaps（大驼峰） 或 mixedCaps（小驼峰） 而不是下划线来书写多词名称。
     [官方社区链接](https://go.dev/doc/effective_go#mixed-caps)。
-    但是有三个例外：
+    但有三个例外：
     *   仅由生成的代码导入的包名称可能包含下划线。
-    *   文件内的测试、基准和示例函数名称 `*_test.go` 可能包含下划线。
-    *   与操作系统或 cgo 交互的低级库可能会重用标识符。如 `_windows.go`
+    *   文件内的测试、基准和示例函数名称 `*_test.go` 包含下划线。
+    *   与操作系统或 cgo 交互的库可能会用标识符。如 `_windows.go`
 
-*   简短，简介，有意义。
+*   简短，有意义。
+
+*   大小写即可见性
+    *   大写字母开头：标识符是导出的（public），可以被包外的其他代码访问。
+    *   小写字母开头：标识符是未导出的（private），仅在当前包内可见。
+
 
 # 2、项目名
 
@@ -17,17 +22,23 @@
 
 # 3、包名
 
-*   包名必须和目录名一致，尽量采取有意义、简短的包名，不要和标准库冲突。
+*   全小写，没有大写或下划线。 正确：`tabwriter`，错误：`tabWriter`、`TabWriter`、`tab_writer`。
 
-*   全部小写，没有大写或下划线。 正确：`tabwriter`，错误：`tabWriter`、`TabWriter`、`tab_writer`
+*   单数。正确：`net/url`，错误：`net/urls`。
 
-*   不用复数。正确：`net/url`，错误：`net/urls`。
+*   不要和标准库冲突。
 
-*   少用 `common、util、shared、lib` 这些不好、信息量不足的名称。
+*   包名与目录名一致，导入时无需重命名即可清晰使用。
+    ```
+    // 包名：user（目录名也为 user）
+    package user
+    ```
 
-*   其不需要在所有源代码中是唯一的。
+*   不需要在所有代码中唯一。
 
 *   包名要简单明了，例如 net、time、log。
+
+*   少用 `common、util、shared、lib` 这些不好、信息量不足、宽泛、无意义的名称。
 
 
 ## 导入包名
@@ -60,14 +71,8 @@ nettrace "golang.net/x/trace"
     *   使用**下划线**分隔各个单词：`approve_service.go`
     *   （推荐这种）全部使用小写，不做特殊处理，官方代码基本上都是这么做的：`approveservice.go`，特殊情况除外`*_test.go`
 
-
-# 5、函数名
-
-*   使用驼峰命名法，不要使用下划线。 举例：`MixedCaps` 或者 `mixedCaps`
-*   有一个例外，为了对相关的测试用例进行分组，函数名可能包含下划线，如：`TestMyFunction_WhatIsBeingTested`
-
-
-# 6、结构体名
+    
+# 5、结构体名
 
 *   采用驼峰命名法，首字母根据访问控制原则大写或者小写（导出的以大写字母开头，而未导出的以小写字母开头）
 
@@ -76,7 +81,7 @@ nettrace "golang.net/x/trace"
 *   避免使用Data、Info这类无意义的结构体名。
     
 
-# 7、接口名
+# 6、接口名
 
 *   命名规则基本和上面的结构体类型一致
 
@@ -99,7 +104,51 @@ nettrace "golang.net/x/trace"
     ```
 
 
-# 8、变量 var
+# 7、方法名
+
+*   使用驼峰命名法，不要使用下划线。 举例：`MixedCaps` 或者 `mixedCaps`
+    *   有一个例外，为了对相关的测试用例进行分组，函数名可能包含下划线，如：`TestMyFunction_WhatIsBeingTested`
+
+*   动词开头，明确动作意图，避免无意义的动词（如 Get 仅在获取值时使用）。如 `CreateUser`、`UpdateOrder`、`DeleteComment`、`ListUsers`、`GetUserByID`
+
+*   方法名基于接收者语义，避免冗余。
+
+    ```
+    type User struct{}
+    
+    // 正确：接收者是 User，方法名无需带 User 前缀
+    func (u *User) GetName() string {}
+    // 错误：冗余前缀
+    func (u *User) GetUserName() string {}
+    ```
+
+
+## 方法接收名（接收器）
+
+*   推荐以类名第一个英文首字母的小写作为接收器的命名。
+
+*   在函数超过20行的时候不要用单字符。
+
+*   不能采用 me、this、self 这类易混淆名称。
+
+*   同一个 struct 的的每个接收器名应该相同
+
+```
+// bad
+func (tray Tray)	
+func (info *ResearchInfo)	
+func (this *ReportWriter)	
+func (self *Scanner)	
+
+// good
+func (t Tray)
+func (ri *ResearchInfo)
+func (w *ReportWriter)
+func (s *Scanner)
+```
+
+
+# 8、变量名
 
 *   和结构体命名类似
 
@@ -126,8 +175,7 @@ nettrace "golang.net/x/trace"
     | DB            | 未导出 | `db`     | `dB`                                   |
     | Txn           | 已导出 | `Txn`    | `TXN`                                  |
 
-    
-*   若变量类型为 bool 类型，则名称应以 Has, Is, Can 或 Allow 开头
+*   若变量类型为 bool 类型，则名称应以 Has, Is, Can, Should 或 Allow 开头
 
 *   变量名更倾向于选择短命名。特别是对于局部变量。 c 比 lineCount 要好，i 比 sliceIndex 要好。
     基本原则是：变量的使用和声明的位置越远，变量名就需要具备越强的描述性
@@ -287,12 +335,12 @@ nettrace "golang.net/x/trace"
     ```
 
 
-# 9、常量命名
+# 9、常量名
 
 *   私有全局常量和局部变量规范一致，均以小写字母开头。
     `const appVersion = "1.0.0"`
 
-*   常量均需遵循驼峰式。首字母根据访问控制原则大写或者小写（导出的以大写字母开头，而未导出的以小写字母开头）
+*   常量使用驼峰命名。首字母根据访问控制原则大写或者小写（导出的以大写字母开头，而未导出的以小写字母开头）
 
 *   如果是枚举类型的常量，需要先创建相应类型：
     ```
@@ -308,29 +356,21 @@ nettrace "golang.net/x/trace"
     ```
 
 
-# 10、方法接收名（接收器）
+# 10、Error 的命名
 
-*   推荐以类名第一个英文首字母的小写作为接收器的命名。
+*   Error 类型应该写成 FooError 的形式。
 
-*   接收器的命名在函数超过20行的时候不要用单字符。
+    ```go
+    type ExitError struct {
+        // ....
+    }
+    ```
 
-*   接收器的命名不能采用me、this、self这类易混淆名称。
+*   Error 变量写成 ErrFoo 的形式。
 
-*   同一个 struct 的的每个接收器名应该相同
-
-```
-// bad
-func (tray Tray)	
-func (info *ResearchInfo)	
-func (this *ReportWriter)	
-func (self *Scanner)	
-
-// good
-func (t Tray)
-func (ri *ResearchInfo)
-func (w *ReportWriter)
-func (s *Scanner)
-```
+    ````go
+    var ErrFormat = errors.New("unknown format")
+    ````
 
 
 # 11、get
@@ -349,18 +389,3 @@ Go 不提供对 getter 和 setter 的自动支持。自己提供 getter 和 sett
 ```
 
 
-# 12、Error 的命名
-
-*   Error类型应该写成FooError的形式。
-
-    ```go
-    type ExitError struct {
-        // ....
-    }
-    ```
-
-*   Error变量写成ErrFoo的形式。
-
-    ````go
-    var ErrFormat = errors.New("unknown format")
-    ````
